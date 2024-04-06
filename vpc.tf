@@ -9,3 +9,14 @@ resource "aws_vpc" "main" {
     Name = "bert"
   }
 }
+
+#creating an ec2 instance
+resource "aws_instance" "desamist" {
+  ami           = "ami-032346ab877c418af"
+  instance_type = "t2.micro" 
+  key_name = "moffo key"
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
